@@ -1,3 +1,17 @@
+'use strict'
+
+String.prototype.isPalindrome = function () {
+	this.isPalindrome = string.toLowerCase();
+	const valid = true;
+	for (const i = 0, j = string.length - 1; i < string.length; i++, j--) {
+		if (string[i] !== string[j]) {
+			valid = false; 
+			break;
+		}
+	}
+	return valid;
+}
+string.isPalindrome();
 // const String = function(str) {
 // 	this.str = str.toLowerCase();
 // }
