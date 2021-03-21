@@ -1,37 +1,11 @@
 'use strict'
 
 String.prototype.isPalindrome = function () {
-	this.isPalindrome = string.toLowerCase();
-	const valid = true;
-	for (const i = 0, j = string.length - 1; i < string.length; i++, j--) {
-		if (string[i] !== string[j]) {
-			valid = false; 
-			break;
-		}
-	}
-	return valid;
+	const string = this.toLowerCase().join('').replace(/\s/g, '').split(' ');
+	console.log(string);
+	console.log(string.reverse());
+	return string === string.reverse();	
 }
-string.isPalindrome();
-// const String = function(str) {
-// 	this.str = str.toLowerCase();
-// }
-// const str = new String (str);
-// String.prototype.isPalindrome = function(str){
-// 	let valid = true;
-// 	for (let i = 0, j = str.length - 1; i < str.length; i++, j--) {
-// 		if (str[i] !== str[j]) {
-// 			valid = false; 
-// 			break;
-// 		}
-// 	}
-// 	return valid;
-// }
-
-// str.prototype = Object.create(String.prototype);
-// String.isPalindrome();
-// console.log(string.str);
-
-
 
 	
 
@@ -39,13 +13,18 @@ function getAverageMark(marks) {
     // код для задачи №2 писать здесь
     let sum = 0;
     let average;
+    let summaryMark;
+    if (marks.length === 0) {
+    	return 0
+    } else {
       for (let i = 0; i < marks.length; i++) {
 	  	sum += marks[i];
 	  }
-    average = sum/marks.length;
-   let roundedAverage = Math.round(average);
-   return roundedAverage;
-    // return averageMark
+	summaryMark = sum;
+    average = summaryMark/marks.length;
+   	let roundedAverage = Math.round(average);
+   	return roundedAverage;
+   }
 }
 
 function checkBirthday(birthday) {
