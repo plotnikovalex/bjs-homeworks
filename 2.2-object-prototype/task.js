@@ -7,6 +7,7 @@ String.prototype.isPalindrome = function () {
 	return string === string.reverse();	
 }
 
+
 	
 
 function getAverageMark(marks) {

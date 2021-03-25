@@ -77,19 +77,15 @@ getAverageMark([4, 2, 3]);
 
 //задача 3
 
-// function getPersonData(secretData) {
-// 	let secretData = secret({aaa; bbb});
-// 	getDecodedValue(secretData);
-// }
+function getPersonData(secretData) {
+	let personData = {
+    firstName: getDecodedValue(secretData.aaa),
+    lastName: getDecodedValue(secretData.bbb)
+  }
+  return personData;
+}
 
-// function getDecodedValue(secret) {
-// 	if (secret.aaa === 0 && secret.bbb ===0) {
-// 		return secret = {firstName: 'Родриго'; lastName: 'Родриго'};
-// 	}  else if (secret.aaa === 1 && secret.bbb ===1) {
-// 		return secret = {firstName: 'Эмильо'; lastName: 'Эмильо'};
-// 	}  else if (secret.aaa === 0 && secret.bbb ===1) {
-// 		return secret = {firstName: 'Родриго'; lastName: 'Эмильо'};
-// 	}  else {
-// 		return secret = {firstName: 'Эмильо'; lastName: 'Родриго'};
-// 	}
-// }
+function getDecodedValue(secret) {
+	let decodedValue = secret === 0 ? 'Родриго' : 'Эмильо';
+	return decodedValue;
+}
