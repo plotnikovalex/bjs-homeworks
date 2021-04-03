@@ -1,10 +1,8 @@
 'use strict'
 
 String.prototype.isPalindrome = function () {
-	const string = this.toLowerCase().join('').replace(/\s/g, '').split(' ');
-	console.log(string);
-	console.log(string.reverse());
-	return string === string.reverse();	
+	const string = this.toLowerCase().replace(/\s/g, '').split('');
+	return string.join('')=== string.reverse().join('');	
 }
 
 
